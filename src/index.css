@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* For the modern, semi-transparent blurred background effect */
+  .frosty-glass {
+    @apply bg-white bg-opacity-10 backdrop-blur-md border border-white border-opacity-10 shadow-lg;
+  }
+
+  /* For a primary call-to-action button with a gradient and hover effect */
+  .button-primary {
+    @apply py-3 px-8 text-white font-bold rounded-full transition-all duration-300;
+    background-image: linear-gradient(to right, #3b82f6, #6d28d9);
+  }
+
+  .button-primary:hover {
+    @apply shadow-lg transform -translate-y-1;
+    background-image: linear-gradient(to right, #6d28d9, #3b82f6);
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1.2s ease-out;
+}
+
+@keyframes pulseSlow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-pulseSlow {
+  animation: pulseSlow 2.5s ease-in-out infinite;
+}
+
+@keyframes colorFadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    color: #ffffff;
+  }
+  50% {
+    color: #3b82f6; /* Tailwind's blue-500 */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    color: #ffffff;
+  }
+}
+
+.animate-colorFadeSlide {
+  animation: colorFadeSlide 2s ease-out forwards;
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% }
+  50% { background-position: 100% }
+  100% { background-position: 0% }
+}
+
+.stylish-heading {
+  background: linear-gradient(90deg, #2563eb, #7c3aed, #ec4899);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeSlideUp 1.5s ease-out forwards, gradientMove 6s ease-in-out infinite;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.8), 0 0 20px rgba(59, 130, 246, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0px rgba(59, 130, 246, 0.5);
+  }
+}
+
+.real-logo {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
