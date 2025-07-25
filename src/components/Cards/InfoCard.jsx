@@ -2,7 +2,7 @@ import React from "react";
 
 const InfoCard = ({ title, subtitle, value, icon, isVisible, index }) => {
   
-  const delay = index * 100;
+  const delay = index * 50;
 
   return (
     // --- CHANGED: Made hover effects much more pronounced ---

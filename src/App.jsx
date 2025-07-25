@@ -3,7 +3,7 @@ import React from 'react';
 import Header from './components/Header';
 import HomeContent from './components/HomeContent';
 import Footer from './components/Footer';
-import SchoolInfo from './components/SchoolInfo';
+import SchoolInfo from './components/Cards/SchoolInfo';
 
 const Home = () => {
   return (
