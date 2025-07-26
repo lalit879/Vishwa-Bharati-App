@@ -4,10 +4,11 @@ import Header from './components/Header';
 import HomeContent from './components/HomeContent';
 import Footer from './components/Footer';
 import SchoolInfo from './components/Cards/SchoolInfo';
+import Chatbot from './components/Chatbot';
 
 const Home = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-white text-gray-800 overflow-x-hidden">
+    <div className="flex flex-col min-h-screen bg-white text-gray-800 ">
       {/* Top Section */}
       <Header />
 
@@ -20,6 +21,7 @@ const Home = () => {
 
       {/* Footer at Bottom */}
       <Footer />
+      <Chatbot /> 
     </div>
   );
 };
