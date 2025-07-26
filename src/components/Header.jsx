@@ -83,7 +83,7 @@ const Header = () => {
           VISHWA BHARATI SHIKSHA SADAN
         </h1>
         {/* --- SLIDER STRUCTURE --- */}
-        <div className="relative w-full max-w-5xl mx-auto mt-8 flex items-center justify-center">
+        <div className="relative w-full max-w-4xl mx-auto mt-8 flex items-center justify-center">
           
           <button
             onClick={goToPrevious}
