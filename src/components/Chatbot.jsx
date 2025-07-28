@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import chatbotIcon from '../assets/Chatbot logo.jpg';
+import chatbotIcon from '@assets/Chatbot logo.jpg';
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);

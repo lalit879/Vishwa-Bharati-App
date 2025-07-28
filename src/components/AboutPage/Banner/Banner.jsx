@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import logo from '../assets/logo.png';
-import schoolBackG from '../assets/schoolBackG.png';
-import Canteen from '../assets/Canteen.png'
-import Vbss from '../assets/Vbss.png'
-import SchoolYard from '../assets/SchoolYard.png'
-import SchoolHall from '../assets/SchoolHall.png'
-import Library from '../assets/Library.png'
+import schoolBackG from '@assets/schoolBackG.png';
+import Canteen from '@assets/AboutPage/Canteen.png'
+import Vbss from '@assets/AboutPage/Vbss.png'
+import SchoolYard from '@assets/AboutPage/SchoolYard.png'
+import SchoolHall from '@assets/AboutPage/SchoolHall.png'
+import Library from '@assets/AboutPage/Library.png'
+import Nav from '../../Navbar/Nav';
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -20,7 +20,7 @@ const sliderImages = [
   { src: Library, name: 'Library' }
 ];
 
-const Header = () => {
+const Banner = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const goToNext = () => {
@@ -46,35 +46,11 @@ const Header = () => {
       className="relative w-full h-[100vh] bg-cover bg-center text-white overflow-hidden"
       style={{ backgroundImage: `url(${schoolBackG})` }}
     >
+      {/* <Nav/> */}
+      <Nav/>
+
       {/* Black Transparent Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
-
-      {/* Navbar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-2 frosty-glass bg-black/60">
-        {/* Logo */}
-        <img
-        src={logo}
-        alt="Logo"
-        className="w-16 h-16 object-contain self-center"
-        />
-
-
-        {/* Menu */}
-        <ul className="flex space-x-10 text-white font-medium text-sm tracking-wider">
-          {['Home', 'About', 'Student', 'Registration', 'Contact Us'].map((item, index) => (
-            <li
-              key={index}
-              className="relative cursor-pointer group transition-all duration-300"
-            >
-              <span className="group-hover:text-blue-400 transition-colors duration-300">
-                {item}
-              </span>
-              <span className="absolute left-0 -bottom-1 w-0 group-hover:w-full h-[2px] bg-blue-400 rounded-full transition-all duration-300"></span>
-            </li>
-          ))}
-        </ul>
-
-      </nav>
 
       {/* Main Content */}
       <div className="relative z-20 px-6 flex flex-col items-center justify-center h-full text-center">
@@ -142,4 +118,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Banner;
