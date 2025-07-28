@@ -1,7 +1,7 @@
 // components/HomeContent.jsx
 import React from 'react';
 
-const HomeContent = () => {
+const Tables = () => {
   return (
     <main className="space-y-12 bg-white mb-16">
       {/* Tables */}
@@ -174,4 +174,4 @@ const HomeContent = () => {
   );
 };
 
-export default HomeContent;
+export default Tables;
