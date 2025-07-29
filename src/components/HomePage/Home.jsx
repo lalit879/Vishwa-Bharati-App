@@ -1,10 +1,10 @@
 // Home.jsx or App.jsx
 import React from 'react';
-import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Chatbot from '../Chatbot';
-import Nav from '../Navbar/Nav';
 import Banner from './Banner/Banner';
+import PrincipalMsg from './PrincipalMsg/PrincipalMsg';
+import SchoolProfileSection from './SchoolProfile/SchoolProfileSection';
 
 const Home = () => {
   return (
@@ -12,10 +12,8 @@ const Home = () => {
       {/* Header */}
       <Banner />
 
-
-
-    
-
+      <PrincipalMsg />
+      <SchoolProfileSection />
       {/* Footer */}
       <Footer />
       <Chatbot /> 

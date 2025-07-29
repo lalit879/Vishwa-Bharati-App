@@ -6,7 +6,7 @@ import Home from './components/HomePage/Home';
 const App = () => {
   return (
     <>
-      {/* <About/> */}
+      <About/>
       <Home/>
     </>
   );

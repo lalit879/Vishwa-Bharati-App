@@ -27,7 +27,7 @@ const Banner = () => {
           <h1 className="text-white text-2xl sm:text-2xl md:text-3xl font-semibold tracking-wide mb-6 drop-shadow">
             VISHWA BHARATI SHIKSHA SADAN
           </h1>
-          <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-md shadow-md transition-colors duration-300 ease-in-out">
+          <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-md shadow-md transition-colors duration-300 ease-in-out">
             Contact us
           </button>
 
