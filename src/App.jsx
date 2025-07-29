@@ -6,8 +6,8 @@ import Home from './components/HomePage/Home';
 const App = () => {
   return (
     <>
-      <About/>
-      {/* <Home/> */}
+      {/* <About/> */}
+      <Home/>
     </>
   );
 };
