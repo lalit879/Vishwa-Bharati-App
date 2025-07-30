@@ -5,6 +5,7 @@ import Chatbot from '../Chatbot';
 import Banner from './Banner/Banner';
 import PrincipalMsg from './PrincipalMsg/PrincipalMsg';
 import SchoolProfileSection from './SchoolProfile/SchoolProfileSection';
+import NewsAndAgenda from './NewsAndAgenda/NewsAndAgenda';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
 
       <PrincipalMsg />
       <SchoolProfileSection />
+      <NewsAndAgenda />
       {/* Footer */}
       <Footer />
       <Chatbot /> 

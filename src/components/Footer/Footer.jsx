@@ -1,12 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import logo from '@assets/logo.png';
-import { Twitter, Facebook, Instagram } from '@mui/icons-material';
+import React from "react";
+import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
+import logo from "@assets/logo.png";
+import { Twitter, Facebook, Instagram } from "@mui/icons-material";
 
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800 pt-12 pb-6 px-6 md:px-16">
-      
       <div className="grid md:grid-cols-4 gap-10">
         {/* Logo & Contact */}
         <div>
@@ -16,8 +16,6 @@ const Footer = () => {
               alt="School Logo"
               className=" h-20 w-20 mb-4 object-cover rounded-full border-4 hover:scale-105 transition-all duration-300"
             />
-
-
           </Link>
           <p className="text-sm">Bihiya Chaurasta, Bhojpur, Bihar (802154)</p>
           <p className="text-sm mt-3 font-medium text-blue-700 cursor-pointer hover:underline transition-all duration-200">
@@ -31,12 +29,17 @@ const Footer = () => {
             Explore
           </h4>
           <ul className="space-y-2 text-sm">
-            {['Welcome', 'School Profile', 'News', 'Gallery'].map((item, index) => (
+            {[
+              { name: "Welcome", path: "/" },
+              { name: "School Profile", path: "/#school-profile" },
+              { name: "News", path: "/#news" },
+              { name: "Gallery", path: "/#gallery" },
+            ].map((item, index) => (
               <li
                 key={index}
                 className="cursor-pointer hover:text-blue-600 hover:translate-x-1 transition-all duration-200"
               >
-                {item}
+                <HashLink to={item.path}>{item.name}</HashLink>
               </li>
             ))}
           </ul>
@@ -49,17 +52,17 @@ const Footer = () => {
           </h4>
           <ul className="space-y-2 text-sm">
             {[
-              'Teacher Data',
-              'New Student Admission',
-              'Guide',
-              'Location',
-              'Contact',
+              { name: "Teacher Data", path: "/teachers" },
+              { name: "New Student Admission", path: "/admission" },
+              { name: "Guide", path: "/guide" },
+              { name: "Location", path: "/location" },
+              { name: "Contact", path: "/contact" },
             ].map((item, index) => (
               <li
                 key={index}
                 className="cursor-pointer hover:text-blue-600 hover:translate-x-1 transition-all duration-200"
               >
-                {item}
+                <Link to={item.path}>{item.name}</Link>
               </li>
             ))}
           </ul>
@@ -87,10 +90,9 @@ const Footer = () => {
       {/* Divider and Bottom Text */}
       <div className="mt-10 border-t border-gray-300 pt-4 text-center text-sm text-gray-600">
         &copy; {new Date().getFullYear()}
-        <span className="font-semibold"> Vishwa Bharati Shiksha Sadan</span>. All rights reserved.
+        <span className="font-semibold"> Vishwa Bharati Shiksha Sadan</span>.
+        All rights reserved.
         <br />
-        
-        
       </div>
     </footer>
   );

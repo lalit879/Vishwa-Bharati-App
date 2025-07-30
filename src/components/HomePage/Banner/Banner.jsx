@@ -1,13 +1,15 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import schoolBackG from '@assets/schoolBackG.png';
 import Nav from '../../Navbar/Nav';
 
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-
-
 const Banner = () => {
+
+  const navigate = useNavigate();
+
+      const goToContactPage = () => {
+        navigate('/contact'); // Navigate to the '/contact' route
+      };
 
   return (
     <header
@@ -27,7 +29,7 @@ const Banner = () => {
           <h1 className="text-white text-2xl sm:text-2xl md:text-3xl font-semibold tracking-wide mb-6 drop-shadow">
             VISHWA BHARATI SHIKSHA SADAN
           </h1>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-md shadow-md transition-colors duration-300 ease-in-out">
+          <button onClick={goToContactPage} className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-md shadow-md transition-colors duration-300 ease-in-out">
             Contact us
           </button>
 
