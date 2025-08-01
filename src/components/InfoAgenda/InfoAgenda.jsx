@@ -37,11 +37,11 @@ const InfoAgenda = () => {
 
 
         {/* Agenda Info Section */}
-        <div className="bg-white py-12 px-6 lg:px-20">
-          <h3 className="text-center text-xl font-semibold mb-10">
+        <div className="bg-white py-12 px-6 md:px-20">
+          <h3 className="text-center text-xl font-semibold mb-4">
             Info Agenda
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:p-20 md:gap-20 gap-10">
             {agendaData.map((item, idx) => (
               <AgendaCard
                 key={idx}
@@ -56,10 +56,10 @@ const InfoAgenda = () => {
         </div>
 
         {/* Description and Image Section */}
-        <div className="bg-[#29a7df] text-white px-6 py-10 lg:px-20 flex flex-col md:flex-row gap-10 items-center">
+        <div className="bg-[#29a7df] text-white px-6 py-10 xl:py-20 xl:px-32 flex flex-col md:flex-row xl:gap-40 gap-10 items-center">
           <div className="flex-1">
-            <p className="mb-6">Assalamualaikum wrwb,</p>
-            <p className="text-sm md:text-base leading-7 text-justify">
+            <p className="xl:mb-12 mb-6">Assalamualaikum wrwb,</p>
+            <p className="lg:leading-loose text-sm md:text-base text-justify">
               Diberitahukan dengan hormat, di tengah masih mewabahnya penyebaran
               Covid-19, semoga Bapak/Ibu dalam keadaan sehat walafiat.
               Selanjutnya, menindaklanjuti Surat Keputusan Bupati Sukabumi Nomor
@@ -71,7 +71,7 @@ const InfoAgenda = () => {
               http://smpn1cibadak.sch.id/ppdb/ dengan jadwal seperti pada
               lampiran surat ini.
             </p>
-            <button className="mt-6 bg-white text-[#29a7df] font-medium px-5 py-2 rounded-md hover:bg-blue-100 transition">
+            <button className="xl:mt-12 mt-6 bg-white text-[#29a7df] font-medium px-5 py-2 rounded-md hover:bg-blue-100 transition">
               Informasi lebih lanjut
             </button>
           </div>

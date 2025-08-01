@@ -18,7 +18,7 @@ const Banner = () => {
       <div className="relative ml-10 m z-20 px-6 h-full">
         {/* School Name */}
         <div className="flex flex-col items-center justify-center mt-20 h-[70%]">
-          <h2 className="text-2xl md:text-3xl font-bold mb-20">
+          <h2 className="text-2xl md:text-3xl font-bold mb-28">
             Pemberitahuan PPDB 2020/2021
           </h2>
           <p className="max-w-xl mx-auto text-sm md:text-base">
