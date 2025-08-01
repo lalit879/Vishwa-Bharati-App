@@ -88,7 +88,7 @@ const Banner = () => {
 
           <button
             onClick={goToNext}
-            className="bg-black bg-opacity-40 hover:bg-opacity-60 text-white text-xl p-3 rounded-full shadow-lg transition duration-300"
+            className="z-[9999] bg-black bg-opacity-40 hover:bg-opacity-60 text-white text-xl p-3 rounded-full shadow-lg transition duration-300"
             aria-label="Next"
           >
             <FontAwesomeIcon icon={faChevronRight} />

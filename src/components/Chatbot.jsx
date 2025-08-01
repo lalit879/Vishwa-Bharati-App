@@ -58,9 +58,9 @@ const Chatbot = () => {
   };
 
   return (
-    <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-4">
+    <div className="fixed bottom-5 right-5 z-30 flex flex-col items-end gap-4">
       {/* Chat Window */}
-      <div className={`transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
+      <div className={`transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
         <div className="w-80 h-96 bg-white rounded-lg shadow-xl flex flex-col">
           {/* Header */}
           <div className="bg-[#2aa7e2] text-white p-3 rounded-t-lg flex justify-between items-center">
@@ -93,7 +93,7 @@ const Chatbot = () => {
       {/* Chat Toggle Button */}
       <button 
         onClick={toggleChat} 
-        className="w-16 h-16 bg-[#2aa7e2] rounded-full shadow-xl flex items-center justify-center hover:bg-[#2596c8] transition-transform duration-200 hover:scale-110"
+        className="w-16 h-16 bg-[#2aa7e2] rounded-full shadow-xl flex items-center justify-center hover:bg-[#2596c8] transition-transform duration-200 hover:scale-110 z-40"
         aria-label="Toggle Chat"
       >
         {isOpen ? (
