@@ -8,7 +8,7 @@ const NewsCard = ({ image, title, description, date }) => {
         <p className="text-xs text-gray-500 mb-2">{description}</p>
         <div className="flex items-center justify-between text-xs text-gray-400">
           <span>{date}</span>
-          <span className="text-lg font-bold text-gray-600">&#8594;</span>
+          <span className="text-lg font-bold text-gray-600 cursor-pointer">&#8594;</span>
         </div>
       </div>
     </div>

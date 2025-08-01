@@ -7,7 +7,7 @@ const AgendaItem = ({ image, date, title }) => {
         <p className="text-xs text-gray-400">{date}</p>
         <h4 className="text-sm font-semibold text-gray-800">{title}</h4>
       </div>
-      <span className="text-lg font-bold text-gray-600">&#8594;</span>
+      <span className="text-lg font-bold text-gray-600 cursor-pointer">&#8594;</span>
     </div>
   );
 };

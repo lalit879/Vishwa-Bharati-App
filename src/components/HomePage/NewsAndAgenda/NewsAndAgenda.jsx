@@ -64,14 +64,14 @@ const NewsAndAgenda = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
         {/* Left: News */}
-        <div className="md:col-span-3 space-y-2">
+        <div className="xl:mr-20 2xl:mr-32 md:col-span-3 space-y-2">
           {newsItems.map((item, index) => (
             <NewsCard key={index} {...item} />
           ))}
         </div>
 
         {/* Right: Agenda */}
-        <div className=" md:col-span-2 space-y-2">
+        <div className="md:col-span-2 space-y-2">
           {agendaItems.map((item, index) => (
             <AgendaItem key={index} {...item} />
           ))}
