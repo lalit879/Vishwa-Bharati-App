@@ -5,6 +5,7 @@ import About from './components/AboutPage/About';
 import Home from './components/HomePage/Home';
 import GalleryPage from './components/GalleryPage/GalleryPage';
 import InfoAgenda from './components/InfoAgenda/InfoAgenda';
+import ContactUs from './components/ContactUs/ContactUs';
 
 const App = () => {
   return (
@@ -14,7 +15,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/gallery" element={<GalleryPage />} />
-          <Route path="/InfoAgenda" element={<InfoAgenda />} />
+          <Route path="/info" element={<InfoAgenda />} />
+          <Route path="/contact" element={<ContactUs />} />
         </Routes>
     </Router>
     </>
