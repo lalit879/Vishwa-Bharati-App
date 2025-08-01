@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PrincipalSpeech from "@assets/HomePage/PrincipalSpeech.png"
 
 const PrincipalMsg = () => {
@@ -46,9 +47,12 @@ const PrincipalMsg = () => {
           <p className="text-gray-500 italic mb-6">
             — Principal, Vishwa Bharati Shiksha Sadan
           </p>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-md transition-all duration-300">
-            Further More
-          </button>
+          <Link to="/info">
+            <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-md transition-all duration-300">
+              Further More
+            </button>
+          </Link>
+          
         </div>
       </div>
     </section>
