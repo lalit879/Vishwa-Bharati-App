@@ -8,11 +8,13 @@ import InfoAgenda from './components/InfoAgenda/InfoAgenda';
 import ContactUs from './components/ContactUs/ContactUs';
 import StudentList from './components/Student/StudentList';
 import TeacherList from './components/Teacher/TeacherList';
+import ScrollToTop from './components/common/ScrollToTop';
 
 const App = () => {
   return (
     <>
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

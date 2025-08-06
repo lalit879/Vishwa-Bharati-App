@@ -2,7 +2,7 @@ import React from "react";
 
 const Pagination = ({ currentPage, totalPages, goToPage }) => {
   return (
-    <div className="flex justify-center mt-10 gap-2">
+    <div className="flex justify-center mt-10 gap-2" style={{ overflowAnchor: "none" }}> 
       <button
         onClick={() => goToPage(currentPage - 1)}
         disabled={currentPage === 1}

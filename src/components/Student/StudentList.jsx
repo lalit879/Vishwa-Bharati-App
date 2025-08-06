@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import StudentCard from "./StudentCard";
 import { FaSearch } from "react-icons/fa";
 import Banner from "./Banner";
@@ -8,6 +8,7 @@ import Pagination from "../common/Pagination";
 const itemsPerPage = 9;
 
 const StudentList = () => {
+  // const sectionRef = useRef(null);
   const [students, setStudents] = useState([]);
   const [query, setQuery] = useState("");
 
@@ -34,7 +35,16 @@ const StudentList = () => {
   );
 
   const goToPage = (page) => {
-    if (page >= 1 && page <= totalPages) setCurrentPage(page);
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+
+      // setTimeout(() => {
+      //   sectionRef.current?.scrollIntoView({
+      //     behavior: "smooth",
+      //     block: "start",
+      //   });
+      // }, 100);
+    }
   };
 
   return (

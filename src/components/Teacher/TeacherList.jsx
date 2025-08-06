@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import TeacherCard from "./TeacherCard";
 import { FaSearch } from "react-icons/fa";
 import Banner from "./Banner";
@@ -8,6 +8,7 @@ import Pagination from "../common/Pagination";
 const itemsPerPage = 6;
 
 const TeacherList = () => {
+//   const sectionRef = useRef(null);
   const [teachers, setTeachers] = useState([]);
   const [query, setQuery] = useState("");
 
@@ -24,7 +25,7 @@ const TeacherList = () => {
   }, [query]);
 
   const filteredTeachers = teachers.filter((t) =>
-    t.name.toLowerCase().includes(query.toLowerCase()),
+    t.name.toLowerCase().includes(query.toLowerCase())
   );
 
   const totalPages = Math.ceil(filteredTeachers.length / itemsPerPage);
@@ -34,7 +35,16 @@ const TeacherList = () => {
   );
 
   const goToPage = (page) => {
-    if (page >= 1 && page <= totalPages) setCurrentPage(page);
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+
+    //   setTimeout(() => {
+    //     sectionRef.current?.scrollIntoView({
+    //       behavior: "smooth",
+    //       block: "start",
+    //     });
+    //   }, 100);
+    }
   };
 
   return (

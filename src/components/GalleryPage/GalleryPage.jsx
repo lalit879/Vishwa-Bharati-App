@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import img1 from "./GalleryImg/img1.png";
 import img2 from "./GalleryImg/img2.png";
 import img3 from "./GalleryImg/img3.png";
@@ -42,6 +42,7 @@ const allGalleryImages = [
 const itemsPerPage = 9;
 
 const GalleryPage = () => {
+  // const sectionRef = useRef(null);
   const [currentPage, setCurrentPage] = useState(1);
 
   const totalPages = Math.ceil(allGalleryImages.length / itemsPerPage);
@@ -51,7 +52,16 @@ const GalleryPage = () => {
   );
 
   const goToPage = (page) => {
-    if (page >= 1 && page <= totalPages) setCurrentPage(page);
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+
+      // setTimeout(() => {
+      //   sectionRef.current?.scrollIntoView({
+      //     behavior: "smooth",
+      //     block: "start",
+      //   });
+      // }, 100);
+    }
   };
 
   return (
