@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. RAJESH KUMAR SHARMA, M.A.",
+    "employee_id": "19750812199203001",
+    "subject": "Social Studies"
+  },
+  {
+    "id": 2,
+    "name": "SUNITA DEVI, M.Sc., B.Ed.",
+    "employee_id": "19680924198702005",
+    "subject": "Mathematics"
+  },
+  {
+    "id": 3,
+    "name": "PROF. AMIT GUPTA, Ph.D.",
+    "employee_id": "19720315198903002",
+    "subject": "English Literature"
+  },
+  {
+    "id": 4,
+    "name": "PRIYA SHARMA, M.A., B.Ed.",
+    "employee_id": "19801205199405003",
+    "subject": "Hindi"
+  },
+  {
+    "id": 5,
+    "name": "VIKASH SINGH, M.P.Ed.",
+    "employee_id": "19770628199001004",
+    "subject": "Physical Education"
+  },
+  {
+    "id": 6,
+    "name": "Dr. MEERA PATEL, M.A., Ph.D.",
+    "employee_id": "19691118198503006",
+    "subject": "Civics"
+  },
+  {
+    "id": 7,
+    "name": "RAVI KUMAR JAIN, M.Sc.",
+    "employee_id": "19740902198802007",
+    "subject": "Physics"
+  },
+  {
+    "id": 8,
+    "name": "KAVITA SINGH, M.A., B.Ed.",
+    "employee_id": "19820716199603008",
+    "subject": "History"
+  },
+  {
+    "id": 9,
+    "name": "DEEPAK VERMA, M.Sc., B.Ed.",
+    "employee_id": "19761230199104009",
+    "subject": "Chemistry"
+  },
+  {
+    "id": 10,
+    "name": "ANITA REDDY, M.A.",
+    "employee_id": "19830408199805010",
+    "subject": "Geography"
+  },
+  {
+    "id": 11,
+    "name": "SURESH CHAND AGARWAL, M.Sc.",
+    "employee_id": "19701022198601011",
+    "subject": "Biology"
+  },
+  {
+    "id": 12,
+    "name": "REKHA SHARMA, M.A., B.Ed.",
+    "employee_id": "19780514199202012",
+    "subject": "Sanskrit"
+  },
+  {
+    "id": 13,
+    "name": "MANOJ KUMAR TIWARI, M.Com.",
+    "employee_id": "19811109199504013",
+    "subject": "Commerce"
+  },
+  {
+    "id": 14,
+    "name": "NEELAM GUPTA, M.A.",
+    "employee_id": "19750320198903014",
+    "subject": "Economics"
+  },
+  {
+    "id": 15,
+    "name": "RAMESH KUMAR PANDEY, M.A.",
+    "employee_id": "19730607198704015",
+    "subject": "Political Science"
+  },
+  {
+    "id": 16,
+    "name": "SUSHMA JOSHI, M.Sc., B.Ed.",
+    "employee_id": "19790825199305016",
+    "subject": "Computer Science"
+  },
+  {
+    "id": 17,
+    "name": "ASHOK KUMAR MISHRA, M.A.",
+    "employee_id": "19720413198802017",
+    "subject": "Psychology"
+  },
+  {
+    "id": 18,
+    "name": "RITA SINGH, M.A., B.Ed.",
+    "employee_id": "19841201199906018",
+    "subject": "Sociology"
+  }
+]

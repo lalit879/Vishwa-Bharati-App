@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import img1 from "./GalleryImg/img1.png";
 import img2 from "./GalleryImg/img2.png";
 import img3 from "./GalleryImg/img3.png";
@@ -18,6 +18,7 @@ import img15 from "./GalleryImg/img15.png";
 import Nav from "../Navbar/Nav";
 import Footer from "../Footer/Footer";
 import Chatbot from "../Chatbot";
+import Pagination from "../common/Pagination";
 
 const allGalleryImages = [
   // Page 1
@@ -41,6 +42,7 @@ const allGalleryImages = [
 const itemsPerPage = 9;
 
 const GalleryPage = () => {
+  // const sectionRef = useRef(null);
   const [currentPage, setCurrentPage] = useState(1);
 
   const totalPages = Math.ceil(allGalleryImages.length / itemsPerPage);
@@ -50,7 +52,16 @@ const GalleryPage = () => {
   );
 
   const goToPage = (page) => {
-    if (page >= 1 && page <= totalPages) setCurrentPage(page);
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+
+      // setTimeout(() => {
+      //   sectionRef.current?.scrollIntoView({
+      //     behavior: "smooth",
+      //     block: "start",
+      //   });
+      // }, 100);
+    }
   };
 
   return (
@@ -77,7 +88,7 @@ const GalleryPage = () => {
         </div>
 
         {/* Pagination */}
-        <div className="flex justify-center mt-10 gap-2">
+        {/* <div className="flex justify-center mt-10 gap-2">
           <button
             onClick={() => goToPage(currentPage - 1)}
             disabled={currentPage === 1}
@@ -115,10 +126,15 @@ const GalleryPage = () => {
           >
             &raquo;
           </button>
-        </div>
+        </div> */}
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          goToPage={goToPage}
+        />
       </div>
       <Footer />
-      <Chatbot /> 
+      <Chatbot />
     </>
   );
 };
