@@ -18,6 +18,7 @@ import img15 from "./GalleryImg/img15.png";
 import Nav from "../Navbar/Nav";
 import Footer from "../Footer/Footer";
 import Chatbot from "../Chatbot";
+import Pagination from "../common/Pagination";
 
 const allGalleryImages = [
   // Page 1
@@ -77,7 +78,7 @@ const GalleryPage = () => {
         </div>
 
         {/* Pagination */}
-        <div className="flex justify-center mt-10 gap-2">
+        {/* <div className="flex justify-center mt-10 gap-2">
           <button
             onClick={() => goToPage(currentPage - 1)}
             disabled={currentPage === 1}
@@ -115,10 +116,15 @@ const GalleryPage = () => {
           >
             &raquo;
           </button>
-        </div>
+        </div> */}
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          goToPage={goToPage}
+        />
       </div>
       <Footer />
-      <Chatbot /> 
+      <Chatbot />
     </>
   );
 };

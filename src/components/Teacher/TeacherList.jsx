@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
 import TeacherCard from "./TeacherCard";
 import { FaSearch } from "react-icons/fa";
-import Banner from "./Banner"
+import Banner from "./Banner";
 import Footer from "../Footer/Footer";
+import Pagination from "../common/Pagination";
+
+const itemsPerPage = 6;
 
 const TeacherList = () => {
   const [teachers, setTeachers] = useState([]);
   const [query, setQuery] = useState("");
-  const [page, setPage] = useState(1);
-  const perPage = 6;
+
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     fetch("/data/teachers.json")
@@ -16,21 +19,32 @@ const TeacherList = () => {
       .then((data) => setTeachers(data));
   }, []);
 
-  const filtered = teachers.filter((t) =>
-    t.name.toLowerCase().includes(query.toLowerCase())
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [query]);
+
+  const filteredTeachers = teachers.filter((t) =>
+    t.name.toLowerCase().includes(query.toLowerCase()),
   );
 
-  const totalPages = Math.ceil(filtered.length / perPage);
-  const paginated = filtered.slice((page - 1) * perPage, page * perPage);
+  const totalPages = Math.ceil(filteredTeachers.length / itemsPerPage);
+  const paginatedTeachers = filteredTeachers.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  const goToPage = (page) => {
+    if (page >= 1 && page <= totalPages) setCurrentPage(page);
+  };
 
   return (
     <>
       <Banner />
-      <div className="min-h-screen bg-[#f9fbfd] px-4 sm:px-6 py-10">
+      <div className="bg-[#f9fbfd] px-4 sm:px-6 py-10">
         <div className="max-w-6xl mx-auto">
-          <div className="flex justify-between items-center mb-6">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
             <h2 className="text-2xl font-bold text-gray-800">Teachers</h2>
-            <div className="relative w-60">
+            <div className="relative w-full sm:w-64">
               <FaSearch className="absolute top-2.5 left-3 text-gray-400" />
               <input
                 type="text"
@@ -42,28 +56,25 @@ const TeacherList = () => {
             </div>
           </div>
 
-          <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {paginated.map((teacher) => (
-              <TeacherCard key={teacher.id} teacher={teacher} />
-            ))}
-          </div>
+          <hr className="border-t border-gray-300 mb-6" />
 
-          {/* Pagination */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {[...Array(totalPages)].map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setPage(i + 1)}
-                className={`px-3 py-1 rounded-full border text-sm ${
-                  i + 1 === page
-                    ? "bg-blue-500 text-white"
-                    : "bg-white text-blue-500 border-blue-500 hover:bg-blue-100"
-                }`}
-              >
-                {i + 1}
-              </button>
-            ))}
-          </div>
+          {paginatedTeachers.length > 0 ? (
+            <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6">
+              {paginatedTeachers.map((teacher) => (
+                <TeacherCard key={teacher.id} teacher={teacher} />
+              ))}
+            </div>
+          ) : (
+            <p className="text-center text-gray-500 mt-10">
+              No teachers found.
+            </p>
+          )}
+
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            goToPage={goToPage}
+          />
         </div>
       </div>
       <Footer />
