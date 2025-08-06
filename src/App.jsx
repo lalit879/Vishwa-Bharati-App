@@ -6,6 +6,8 @@ import Home from './components/HomePage/Home';
 import GalleryPage from './components/GalleryPage/GalleryPage';
 import InfoAgenda from './components/InfoAgenda/InfoAgenda';
 import ContactUs from './components/ContactUs/ContactUs';
+import StudentList from './components/Student/StudentList';
+import TeacherList from './components/Teacher/TeacherList';
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/info" element={<InfoAgenda />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/student" element={<StudentList />} />
+          <Route path="/teacher" element={<TeacherList />} />
         </Routes>
     </Router>
     </>

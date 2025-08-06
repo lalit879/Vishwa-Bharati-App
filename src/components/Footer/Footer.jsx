@@ -32,6 +32,7 @@ const Footer = () => {
             {[
               { name: "Welcome", path: "/" },
               { name: "School Profile", path: "/#school-profile" },
+              { name: "Student", path: "/student" },
               { name: "News", path: "/#news" },
               { name: "Gallery", path: "/#gallery" },
             ].map((item, index) => (
@@ -52,9 +53,8 @@ const Footer = () => {
           </h4>
           <ul className="space-y-2 text-sm">
             {[
-              { name: "Teacher Data", path: "/teachers" },
+              { name: "Teacher Data", path: "/teacher" },
               { name: "New Student Admission", path: "/admission" },
-              { name: "Guide", path: "/guide" },
               { name: "Location", path: "/location" },
               { name: "Contact", path: "/contact" },
             ].map((item, index) => (
