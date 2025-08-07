@@ -17,7 +17,6 @@ import img15 from "./GalleryImg/img15.png";
 
 import Nav from "../Navbar/Nav";
 import Footer from "../Footer/Footer";
-import Chatbot from "../Chatbot";
 import Pagination from "../common/Pagination";
 
 const allGalleryImages = [
@@ -134,7 +133,6 @@ const GalleryPage = () => {
         />
       </div>
       <Footer />
-      <Chatbot />
     </>
   );
 };
