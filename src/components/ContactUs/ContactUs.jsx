@@ -39,7 +39,7 @@ const ContactUs = () => {
                 value={formData.name}
                 onChange={handleChange}
                 className="border rounded-md p-3 focus:outline-blue-400"
-                placeholder="Harsh Gajera"
+                placeholder="Full Name"
                 required
               />
             </div>

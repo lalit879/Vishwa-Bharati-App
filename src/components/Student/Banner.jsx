@@ -21,9 +21,8 @@ const Banner = () => {
           <h2 className="text-2xl md:text-3xl font-bold mb-28">
             Student Data
           </h2>
-          <p className="max-w-xl mx-auto text-sm md:text-base">
-            Lorem ipsum dolor sit amet consectetur adipiscing aqua lorem ipsum
-            dolor sit amet consectetur adipiscing aquatext-center
+          <p className="max-w-xl mx-auto text-sm md:text-base text-center">
+            Explore detailed information about our student body, including enrollment statistics, classroom data, and demographics for the current academic year.
           </p>
         </div>
       </div>
