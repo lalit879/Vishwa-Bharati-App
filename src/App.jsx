@@ -9,7 +9,8 @@ import ContactUs from './components/ContactUs/ContactUs';
 import StudentList from './components/Student/StudentList';
 import TeacherList from './components/Teacher/TeacherList';
 import ScrollToTop from './components/common/ScrollToTop';
-import NewsPage from './components/NewsPage/NewsPage';
+
+import Registration from './components/Registration';
 
 const App = () => {
   return (
@@ -24,7 +25,9 @@ const App = () => {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/student" element={<StudentList />} />
           <Route path="/teacher" element={<TeacherList />} />
-          <Route path="/news" element={<NewsPage />} />
+
+          <Route path="/registration" element={<Registration />} />
+
         </Routes>
     </Router>
     </>

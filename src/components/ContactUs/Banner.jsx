@@ -21,9 +21,8 @@ const Banner = () => {
           <h2 className="text-2xl md:text-3xl font-bold mb-28">
             Contact Us
           </h2>
-          <p className="max-w-xl mx-auto text-sm md:text-base">
-            Lorem ipsum dolor sit amet consectetur adipiscing aqua lorem ipsum
-            dolor sit amet consectetur adipiscing aquatext-center
+          <p className="max-w-xl mx-auto text-sm md:text-base text-center">
+            We're here to help! Whether you have questions about admissions, curriculum, or events, feel free to reach out to us through the form below.
           </p>
         </div>
       </div>

@@ -30,7 +30,7 @@ const Footer = () => {
           </h4>
           <ul className="space-y-2 text-sm">
             {[
-              { name: "Welcome", path: "/" },
+              { name: "Welcome", path: "/#school-profile" },
               { name: "School Profile", path: "/#school-profile" },
               { name: "Student", path: "/student" },
               { name: "News", path: "/news" },
@@ -54,8 +54,8 @@ const Footer = () => {
           <ul className="space-y-2 text-sm">
             {[
               { name: "Teacher Data", path: "/teacher" },
-              { name: "New Student Admission", path: "/admission" },
-              { name: "Location", path: "/location" },
+              { name: "New Student Admission", path: "/registration" },
+              // { name: "Location", path: "/contact" },
               { name: "Contact", path: "/contact" },
             ].map((item, index) => (
               <li
@@ -74,15 +74,21 @@ const Footer = () => {
             Connect With Us
           </h4>
           <div className="flex space-x-5 mt-4">
-            <div className="p-2 bg-white rounded-full shadow hover:shadow-md cursor-pointer transition-transform duration-200 hover:scale-110">
-              <Twitter className="text-blue-500" titleAccess="Twitter" />
-            </div>
-            <div className="p-2 bg-white rounded-full shadow hover:shadow-md cursor-pointer transition-transform duration-200 hover:scale-110">
-              <Facebook className="text-blue-700" titleAccess="Facebook" />
-            </div>
-            <div className="p-2 bg-white rounded-full shadow hover:shadow-md cursor-pointer transition-transform duration-200 hover:scale-110">
-              <Instagram className="text-pink-500" titleAccess="Instagram" />
-            </div>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <div className="p-2 bg-white rounded-full shadow hover:shadow-md cursor-pointer transition-transform duration-200 hover:scale-110">
+                <Twitter className="text-blue-500" titleAccess="Twitter" />
+              </div>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <div className="p-2 bg-white rounded-full shadow hover:shadow-md cursor-pointer transition-transform duration-200 hover:scale-110">
+                <Facebook className="text-blue-700" titleAccess="Facebook" />
+              </div>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <div className="p-2 bg-white rounded-full shadow hover:shadow-md cursor-pointer transition-transform duration-200 hover:scale-110">
+                <Instagram className="text-pink-500" titleAccess="Instagram" />
+              </div>
+            </a>
           </div>
         </div>
       </div>

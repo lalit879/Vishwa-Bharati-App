@@ -21,9 +21,8 @@ const Banner = () => {
           <h2 className="text-2xl md:text-3xl font-bold mb-28">
             Teachers Data
           </h2>
-          <p className="max-w-xl mx-auto text-sm md:text-base">
-            Lorem ipsum dolor sit amet consectetur adipiscing aqua lorem ipsum
-            dolor sit amet consectetur adipiscing aquatext-center
+          <p className="max-w-xl mx-auto text-sm md:text-base text-center">
+            Meet our dedicated and experienced faculty who are committed to nurturing the next generation of leaders and innovators.
           </p>
         </div>
       </div>
