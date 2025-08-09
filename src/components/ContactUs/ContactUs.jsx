@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Banner from "./Banner";
 import Footer from "../Footer/Footer";
-import Chatbot from "../Chatbot";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -108,7 +107,6 @@ const ContactUs = () => {
         </div>
       </section>
       <Footer />
-      <Chatbot />
     </>
   );
 };

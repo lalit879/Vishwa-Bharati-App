@@ -4,7 +4,6 @@ import Banner from './Banner/Banner';
 import Footer from '../Footer/Footer';
 import Tables from './Tables/Tables';
 import SchoolInfo from './Cards/SchoolInfo';
-import Chatbot from '../Chatbot';
 
 const About = () => {
   return (
@@ -21,7 +20,6 @@ const About = () => {
 
       {/* Footer */}
       <Footer />
-      <Chatbot /> 
     </div>
   );
 };

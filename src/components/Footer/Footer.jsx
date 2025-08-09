@@ -33,7 +33,7 @@ const Footer = () => {
               { name: "Welcome", path: "/#school-profile" },
               { name: "School Profile", path: "/#school-profile" },
               { name: "Student", path: "/student" },
-              { name: "News", path: "/#news" },
+              { name: "News", path: "/news" },
               { name: "Gallery", path: "/#gallery" },
             ].map((item, index) => (
               <li
