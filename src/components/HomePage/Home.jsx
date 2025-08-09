@@ -1,6 +1,7 @@
 // Home.jsx or App.jsx
 import React from 'react';
 import Footer from '../Footer/Footer';
+import Chatbot from '../Chatbot';
 import Banner from './Banner/Banner';
 import PrincipalMsg from './PrincipalMsg/PrincipalMsg';
 import SchoolProfileSection from './SchoolProfile/SchoolProfileSection';
@@ -20,6 +21,7 @@ const Home = () => {
       
       {/* Footer */}
       <Footer />
+      <Chatbot /> 
     </div>
   );
 };

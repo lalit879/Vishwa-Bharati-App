@@ -9,7 +9,6 @@ import ContactUs from './components/ContactUs/ContactUs';
 import StudentList from './components/Student/StudentList';
 import TeacherList from './components/Teacher/TeacherList';
 import ScrollToTop from './components/common/ScrollToTop';
-
 import Registration from './components/Registration';
 
 const App = () => {
@@ -25,9 +24,7 @@ const App = () => {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/student" element={<StudentList />} />
           <Route path="/teacher" element={<TeacherList />} />
-
           <Route path="/registration" element={<Registration />} />
-
         </Routes>
     </Router>
     </>
